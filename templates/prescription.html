@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablet Prescription</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .prescription-container {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .prescription-container h2 {
+            color: #2c3e50;
+        }
+        .prescription-container p {
+            font-size: 18px;
+        }
+        .tablet-list {
+            margin-top: 20px;
+        }
+        .tablet-list li {
+            font-size: 18px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container a {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .button-container a:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tablet Prescription for {{ disease_name }}</h1>
+
+    <div class="prescription-container">
+        <h2>Suggested Tablets:</h2>
+        <ul class="tablet-list">
+            {% for tablet in tablets %}
+                <li>{{ tablet }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="button-container">
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
+

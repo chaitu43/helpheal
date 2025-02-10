@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .form-container {
+            margin-top: 20px;
+        }
+        .form-container label {
+            font-size: 18px;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .form-container button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .form-container button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Disease Prediction based on Symptoms</h1>
+    
+    <div class="form-container">
+        <form action="/predict" method="post">
+            <label for="symptoms-input">Enter Symptoms (comma-separated):</label><br>
+            <input type="text" id="symptoms-input" name="symptoms" placeholder="e.g., Fever, Cough, Headache" required>
+            <br>
+            <button type="submit">Predict Disease</button>
+        </form>
+    </div>
+</body>
+</html>
+
